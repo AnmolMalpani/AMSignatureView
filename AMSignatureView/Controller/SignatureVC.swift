@@ -21,6 +21,10 @@ class SignatureVC: UIViewController {
     
     // MARK: - User methods
     @IBAction fileprivate func previewVCMethod(_ sender : UIButton) {
+        if signView.isEmpty {
+            showAlert("Please draw something")
+            return
+        }
         let previewVC = self.storyboard?.instantiateViewController(withIdentifier: "PreviewVC") as! PreviewVC
         if let image = signView.getDesign {
             print(image)
