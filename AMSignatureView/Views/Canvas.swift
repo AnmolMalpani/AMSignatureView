@@ -9,7 +9,6 @@
 import UIKit
 
 // MARK: - Designable Class
-
 @IBDesignable open class Canvas: UIView {
     
     // Inspectable elements

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I9Y-4e-Gtf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I9Y-4e-Gtf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-1034" y="133"/>
         </scene>
-        <!--AMSignature View-->
+        <!--SignatureVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignatureVC" customModule="AMSignatureView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="SignatureVC" customClass="SignatureVC" customModule="AMSignatureView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="showImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZTH-jH-2vD"/>
+                                            <action selector="previewVCMethod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WTr-BY-OBW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="976-Hd-zeb">
@@ -78,7 +78,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="handleClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1R9-oF-UHh"/>
+                                            <action selector="clearSignature:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QDG-al-P3s"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
-        <!--AMSignature View-->
+        <!--PreviewVC-->
         <scene sceneID="OfY-bK-kD0">
             <objects>
-                <viewController storyboardIdentifier="PreviewVC" id="uuX-nD-sZ9" customClass="PreviewVC" customModule="AMSignatureView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PreviewVC" id="uuX-nD-sZ9" userLabel="PreviewVC" customClass="PreviewVC" customModule="AMSignatureView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="77Q-hP-gVB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,7 +136,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="AMSignature View" id="wRW-mN-Nay"/>
                     <connections>
-                        <outlet property="imgView" destination="dkw-SQ-JTZ" id="Z6m-VQ-T9M"/>
+                        <outlet property="signatureImg" destination="dkw-SQ-JTZ" id="RNM-Za-voP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jUj-kx-i18" sceneMemberID="firstResponder"/>
